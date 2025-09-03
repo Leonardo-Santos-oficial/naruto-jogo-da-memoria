@@ -30,7 +30,16 @@ function App() {
 
   useEffect(() => {
     setup();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // cleanup on unmount to avoid stray intervals
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+    };
   }, []);
 
   // start timer on first flip

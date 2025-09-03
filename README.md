@@ -1,29 +1,70 @@
-# React + Vite
+<div align="center">
+	<img src="/banner.svg" alt="Banner – Memória Coder Naruto" width="100%"/>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Memória Coder — Naruto (React + Vite)
 
-Currently, two official plugins are available:
+Jogo da memória construído com React 18+ e Vite, tema Naruto, animação 3D nas cartas e arquitetura modular conforme o PRD do repositório.
 
-# Memória Coder — Naruto (React + Vite)
+## Como rodar o projeto
 
-Um jogo da memória em React 18 com tema Naruto, seguindo o PRD incluso neste repositório.
+Pré-requisitos: Node 18+ e npm.
 
-Recursos:
-- Componentes modulares (Header, GameBoard, Card, ScorePanel)
-- Hooks modernos (useState, useEffect)
-- Lógica extraída para utils (embaralhar e geração de cartas)
-- Animação 3D de flip via CSS
-- Layout responsivo
+Desenvolvimento (hot reload):
 
-Como executar:
-1. Instale as dependências.
-2. Inicie o servidor de desenvolvimento.
+```powershell
+cd "d:\leo\Projetos\🎮 Jogo da Memória"
+npm install
+npm run dev -- --host
+```
 
-Estrutura principal (src/):
-- components/ — UI do jogo
-- utils/ — lógica pura (shuffle, generateCards)
-- assets/naruto — ícones simples SVG para as cartas
+Build de produção e preview local:
 
-## Expanding the ESLint configuration
+```powershell
+npm run clean
+npm run build
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features principais
+
+- Geração e embaralhamento de cartas (utils dedicados)
+- Mecânica de jogo: vira 2 cartas, confere par, desvira após 1s se não combinar
+- Trava de interação enquanto anima (evita cliques extras)
+- HUD com contador de jogadas e cronômetro que inicia no primeiro clique
+- Reinício do jogo (reset total de estados)
+- Mensagem de vitória ao finalizar todos os pares
+- Animação 3D de flip com CSS (transform/transition)
+- Layout responsivo (grid 4 colunas desktop, 3 em telas menores)
+- Tema Naruto com ícones SVG simples e facilmente substituíveis
+
+## Tecnologias utilizadas
+
+- React 18+ (Hooks: useState, useEffect)
+- Vite 7 (build/dev server)
+- JavaScript moderno (ES6+): arrow functions, destructuring, spread
+- CSS moderno (Flex/Grid, transitions, transform 3D)
+- ESLint (qualidade e padronização)
+
+## Estrutura do projeto
+
+```
+src/
+	components/        # UI: Header, ScorePanel, GameBoard, Card
+	utils/             # Lógica pura: shuffle, generateCards
+	assets/naruto/     # Ícones SVG do tema
+public/
+	banner.svg         # Banner do README
+	leaf.svg           # Favicon
+```
+
+## Observações
+
+- Os ícones de Naruto são placeholders em SVG; substitua por artes oficiais se tiver licença. Basta trocar os arquivos em `src/assets/naruto/`.
+- O PRD do projeto está em `PRD - Projeto Jogo da Memória React.md`.
+
+## Deploy
+
+- Vercel: importando o repo do GitHub (Framework: Vite; Root: `.`), sem config extra.
+- Netlify: Build command `npm run build`, Publish directory `dist`.
+
