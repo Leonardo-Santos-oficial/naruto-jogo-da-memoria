@@ -1,0 +1,101 @@
+:root {
+  --bg: #0b0f1a;
+  --text: #e5e7eb;
+  --accent: #f59e0b; /* naruto orange */
+  --panel: #111827;
+  --card-front: #1f2937;
+}
+
+html, body, #root { height: 100%; }
+
+.app {
+  min-height: 100%;
+  background: radial-gradient(1200px 800px at 10% 0%, #0f172a 0%, var(--bg) 70%);
+  color: var(--text);
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto 16px;
+}
+.header h1 {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+.btn {
+  background: var(--accent);
+  color: #111;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn:hover { filter: brightness(1.05); }
+
+.score-panel {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel);
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 10px 14px;
+  max-width: 960px;
+  margin: 0 auto 16px;
+}
+.victory { color: #22c55e; font-weight: 600; }
+
+.game-board {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  perspective: 1000px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.card:focus-visible { outline: 2px solid var(--accent); }
+.card .card-inner {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+.card.flipped .card-inner, .card.matched .card-inner { transform: rotateY(180deg); }
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+.card-front {
+  background: linear-gradient(135deg, #111827, #0b1220);
+  border: 1px solid #1f2937;
+}
+.card-back {
+  background: linear-gradient(135deg, #111827, #0b1220);
+  border: 1px solid var(--accent);
+  transform: rotateY(180deg);
+}
+.card-back img { width: 60%; height: 60%; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6)); }
+
+@media (max-width: 720px) {
+  .game-board { grid-template-columns: repeat(3, 1fr); }
+}
