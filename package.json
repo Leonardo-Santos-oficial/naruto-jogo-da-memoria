@@ -10,13 +10,16 @@
     "preview": "vite preview",
     "clean": "rimraf dist",
     "screenshot": "node scripts/screenshot.js",
-    "shot": "npm run build && (start /B cmd /C \"npm run preview^ & ping -n 6 127.0.0.1 >NUL\") && node scripts/screenshot.js && taskkill /IM node.exe /F >NUL 2>&1 || exit /b 0"
+    "shot": "npm run build && (start /B cmd /C \"npm run preview^ & ping -n 6 127.0.0.1 >NUL\") && node scripts/screenshot.js && taskkill /IM node.exe /F >NUL 2>&1 || exit /b 0",
+    "prepare": "husky"
   },
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.33.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
@@ -25,6 +28,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "husky": "^9.1.7",
     "puppeteer": "^23.11.1",
     "rimraf": "^5.0.10",
     "vite": "^7.1.2"
