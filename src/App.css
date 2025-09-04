@@ -93,8 +93,15 @@ html, body, #root { height: 100%; }
   background: linear-gradient(135deg, #111827, #0b1220);
   border: 1px solid var(--accent);
   transform: rotateY(180deg);
+  padding: 6%; /* preenche o card sem distorcer a imagem */
 }
-.card-back img { width: 60%; height: 60%; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6)); }
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* evita distorção mantendo proporção */
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
+}
 
 @media (max-width: 720px) {
   .game-board { grid-template-columns: repeat(3, 1fr); }
