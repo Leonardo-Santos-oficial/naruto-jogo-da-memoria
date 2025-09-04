@@ -26,4 +26,14 @@ export default defineConfig([
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
+  // Node environment for build/automation scripts
+  {
+    files: ['scripts/**/*.js'],
+    languageOptions: {
+      globals: { ...globals.node },
+    },
+    rules: {
+      // allow process, __dirname, etc.
+    },
+  },
 ])

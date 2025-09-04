@@ -11,10 +11,9 @@ async function run() {
     await page.setViewport({ width: 1280, height: 800, deviceScaleFactor: 1 });
     // Retry logic in case preview isn't ready yet
     let attempts = 0;
-    // eslint-disable-next-line no-constant-condition
-    while (true) {
+  while (true) {
       try {
-  await page.goto(PREVIEW_URL, { waitUntil: 'networkidle2', timeout: 15000 });
+    await page.goto(PREVIEW_URL, { waitUntil: 'networkidle2', timeout: 15000 });
         break;
       } catch (e) {
         attempts += 1;
