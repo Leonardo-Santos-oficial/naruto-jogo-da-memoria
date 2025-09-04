@@ -86,8 +86,13 @@ html, body, #root { height: 100%; }
   place-items: center;
 }
 .card-front {
-  background: linear-gradient(135deg, #111827, #0b1220);
-  border: 1px solid #1f2937;
+  /* Verso (antes de virar): laranja Naruto + kunai central */
+  background-color: var(--accent);
+  background-image: url('./assets/naruto/Kunai.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 54%;
+  border: 1px solid #b45309;
 }
 .card-back {
   background: linear-gradient(135deg, #111827, #0b1220);
