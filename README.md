@@ -1,5 +1,9 @@
 <div align="center">
 	<img src="./src/assets/naruto/Banner.svg" alt="Banner – Memória Coder Naruto" width="100%"/>
+	<br/>
+	<a href="https://naruto-jogo-da-memoria.netlify.app">
+		<img src="https://img.shields.io/badge/Live%20Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify" alt="Live Demo"/>
+	</a>
 </div>
 
 ## Memória Coder — Naruto (React + Vite)
