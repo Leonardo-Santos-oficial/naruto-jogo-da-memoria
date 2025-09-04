@@ -3,7 +3,7 @@ import sasuke from './sasuke.svg';
 import sakura from './sakura.svg';
 import kakashi from './kakashi.svg';
 import itachi from './itachi.svg';
-import gaara from './gaara.svg';
+import gaara from './shikamaru.svg';
 import hinata from './hinata.svg';
 import jiraiya from './jiraiya.svg';
 
