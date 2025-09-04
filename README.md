@@ -10,9 +10,9 @@
 
 Jogo da memória construído com React 18+ e Vite, tema Naruto, animação 3D nas cartas e arquitetura modular.
 
-### Executável (demo online)
+### Live Demo
 
-Acesse a versão publicada: https://naruto-jogo-da-memoria.netlify.app
+https://naruto-jogo-da-memoria.netlify.app
 
 ## Como rodar o projeto
 
