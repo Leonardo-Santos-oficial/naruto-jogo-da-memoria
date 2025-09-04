@@ -1,10 +1,10 @@
 <div align="center">
-	<img src="/banner.svg" alt="Banner – Memória Coder Naruto" width="100%"/>
+	<img src="./src/assets/naruto/Banner.svg" alt="Banner – Memória Coder Naruto" width="100%"/>
 </div>
 
 ## Memória Coder — Naruto (React + Vite)
 
-Jogo da memória construído com React 18+ e Vite, tema Naruto, animação 3D nas cartas e arquitetura modular conforme o PRD do repositório.
+Jogo da memória construído com React 18+ e Vite, tema Naruto, animação 3D nas cartas e arquitetura modular.
 
 ## Como rodar o projeto
 
@@ -52,16 +52,15 @@ npm run preview
 src/
 	components/        # UI: Header, ScorePanel, GameBoard, Card
 	utils/             # Lógica pura: shuffle, generateCards
-	assets/naruto/     # Ícones SVG do tema
+	assets/naruto/     # Ícones SVG do tema + Banner do README
 public/
-	banner.svg         # Banner do README
 	leaf.svg           # Favicon
 ```
 
 ## Observações
 
 - Os ícones de Naruto são placeholders em SVG; substitua por artes oficiais se tiver licença. Basta trocar os arquivos em `src/assets/naruto/`.
-- O PRD do projeto está em `PRD - Projeto Jogo da Memória React.md`.
+
 
 ## Deploy
 
